@@ -1,0 +1,36 @@
+.App {
+  text-align: center; }
+
+.App-logo {
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  margin: 0px;
+  font-size: 2em;
+  color: #4C6383; }
+
+.MuiToolbar-root {
+  background-color: #fff; }
+
+@media only screen and (max-width: 1100px) {
+  .MuiToolbar-root {
+    background-color: red !important; } }
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+main {
+  background-color: rgba(76, 99, 131, 0.18); }
+
+.container {
+  padding: 24px;
+  height: 80vh; }
+  .container:nth-child(odd) {
+    background-color: #fff; }
+  .container:last-child {
+    height: calc(100vh - 64px); }
+
+.MuiButtonBase-root {
+  border-radius: 20px !important; }

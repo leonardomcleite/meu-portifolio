@@ -1,0 +1,19 @@
+img {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+div.content {
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
