@@ -22,15 +22,50 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 main {
-  background-color: rgba(76, 99, 131, 0.18); }
+  background-color: #e7eaed; }
 
 .container {
   padding: 24px;
   height: 80vh; }
+  .container polygon {
+    fill: #fff; }
   .container:nth-child(odd) {
     background-color: #fff; }
+    .container:nth-child(odd) .footer {
+      transform: scaleX(-1); }
+    .container:nth-child(odd) polygon {
+      fill: #e7eaed; }
   .container:last-child {
     height: calc(100vh - 64px); }
 
 .MuiButtonBase-root {
   border-radius: 20px !important; }
+
+.full-height {
+  height: 100%; }
+
+.full-width {
+  width: 100%; }
+
+.flex {
+  display: flex; }
+  .flex.row {
+    flex-direction: row; }
+    .flex.row.center {
+      justify-content: center;
+      align-items: center; }
+    .flex.row.left {
+      justify-content: flex-start; }
+    .flex.row.right {
+      justify-content: flex-end;
+      flex-grow: 1; }
+    .flex.row.h-center {
+      justify-content: center; }
+    .flex.row.v-center {
+      align-content: center;
+      align-items: center; }
+  .flex.col {
+    flex-direction: column; }
+    .flex.col.center {
+      justify-content: center;
+      align-items: center; }

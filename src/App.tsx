@@ -47,7 +47,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Fab size="small" color="secondary" aria-label="add" className={classes.mgSp1} onClick={goToTop}>
+      <Fab size="small" color="secondary" aria-label="add" className={classes.mgSp1} onClick={goToTop} style={{ zIndex: 1}}>
         <ExpandLessIcon />
       </Fab>
       <CssBaseline />

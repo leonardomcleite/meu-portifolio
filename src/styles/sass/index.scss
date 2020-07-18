@@ -18,14 +18,23 @@ body {
 // }
 
 main {
-  background-color: rgba(76, 99, 131, 0.18);
+  background-color: rgb(231, 234, 237);
 }
 
 .container {
   padding: 24px;
   height: 80vh;
+  polygon {
+    fill: #fff
+  }
   &:nth-child(odd) {
     background-color: #fff;
+    .footer {
+      transform: scaleX(-1);
+    }
+    polygon {
+      fill: rgb(231, 234, 237);
+    }
   }
   &:last-child {
     height: calc(100vh - 64px);
@@ -34,4 +43,44 @@ main {
 
 .MuiButtonBase-root {
   border-radius: 20px !important;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  &.row {
+    flex-direction: row;
+    &.center {
+      justify-content: center;
+      align-items: center;
+    }
+    &.left {
+      justify-content: flex-start;
+    }
+    &.right {
+      justify-content: flex-end;
+      flex-grow: 1;
+    }
+    &.h-center {
+      justify-content: center;
+    }
+    &.v-center {
+      align-content: center;
+      align-items: center;
+    }
+  }
+  &.col {
+    flex-direction: column;
+    &.center {
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }

@@ -9,7 +9,7 @@ import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     spacingButtons: {
-      marginLeft: 10,
+      width: 185
     },
   }),
 );
@@ -21,32 +21,43 @@ const Home = () => {
   return(
     <ScrollableAnchor id={'home'}>
       <div className='container'>
-        <ScrollAnimation animateIn="fadeIn" delay={delay} offset={0}>
-          <Grid container spacing={0}>
-            <Grid item xs={12} sm={6}>
-              <div className='content'>
-                <Typography variant="h1" className='title'>
-                  Prazer,
-                </Typography>
-                <Typography variant="h1" className='title'>
-                  Eu sou o Leonardo!
-                </Typography>
-                <Typography variant="h6" className='title'>
-                  Desenvolvedor Full-Stack (Sênior)
-                </Typography>
-                <Button className={classes.spacingButtons}
-                  variant="contained"
-                  color='secondary'
-                  endIcon={<WhatsAppIcon/>}>
-                    Fale Comigo!
-                </Button>
-              </div>
+        <div className='full-height'>
+          <ScrollAnimation className='flex full-height' animateIn='fadeIn' delay={delay} offset={0}>
+            <Grid container spacing={0} className='flex full-height'>
+              <Grid item xs={12} sm={6} className='flex row center full-height'>
+                <div className='content'>
+                  <Typography variant='h1' className='title'>
+                    Prazer,
+                    <br/>
+                    Eu sou o Leonardo!
+                  </Typography>
+                  <Typography variant='h6' className='title'>
+                    Desenvolvedor Full-Stack (Sênior)
+                  </Typography>
+                  <div style={{width: '100%', justifyContent: 'center', display: 'flex', marginTop: 35}}>
+                    <Button className={classes.spacingButtons}
+                      href='https://whats.link/leonardomcleite'
+                      target='_blank'
+                      variant='contained'
+                      color='secondary'
+                      size='large'
+                      endIcon={<WhatsAppIcon/>}>
+                        Fale Comigo!
+                    </Button>
+                  </div>
+                </div>
+              </Grid>
+              <Grid item xs={12} sm={6} className='flex row left v-center full-height'>
+                <img className='programmer' src='./assets/images/dev.png' alt=''/>
+              </Grid>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <img src="./assets/images/dev.png" alt=""/>
-            </Grid>
-          </Grid>
-        </ScrollAnimation>
+          </ScrollAnimation>
+        </div>
+        <div className='footer'>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+            <polygon points="100 0 100 10 0 10" />
+          </svg>
+        </div>
       </div>
     </ScrollableAnchor>
   )
