@@ -1,35 +1,35 @@
+import { Grid, Typography } from '@material-ui/core'
+import { delay } from 'core/scroll.consts'
 import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
 import ScrollableAnchor from 'react-scrollable-anchor'
-import { delay } from 'core/scroll.consts'
-import { Grid, Typography, Button } from '@material-ui/core'
-import classes from '*.module.css'
 
 const AboutMe = () => {
 
   return(
     <ScrollableAnchor id={'aboutMe'}>
-      <div className='container'>
+      <div className='container code'>
         <div className='full-height'>
           <ScrollAnimation className='flex full-height' animateIn='fadeIn' delay={delay} offset={0}>
             <Grid container spacing={0} className='flex full-height'>
               <Grid item xs={12} sm={6} className='flex row center full-height'>
-                <img src='./assets/images/about-me.png' alt=''/>
+                <img src='./assets/images/dev.png' alt=''/>
               </Grid>
               <Grid item xs={12} sm={6} className='flex row center full-height'>
-                <div className='content'>
-                  <Typography variant='h1' className='title'>
-                    Sobre mim
-                  </Typography>
-                  <Typography variant='h6' className='title'>
-                    Cursando Análise e Desenvolvimento de Sistemas na UNIP, formado em Engenharia Elétrica. ​
-                    Aluno do Boot Camp GoStack da Rocketseat. Venho criando projetos com as tecnologias:​
-                    HTML, CSS, JavaScript, TypeScript, Node.js, React JS, React Native, SQL, NoSQL.​
-                    Pronto para participar de novos projetos e aprender ainda mais sobre esse mundo do desenvolvimento.
-                  </Typography>
-                </div>
+                <ScrollAnimation animateIn='fadeInToBottom' delay={delay} offset={0}>
+                  <div className='content highlight'>
+                    <Typography variant='h1' className='title'>
+                      Sobre mim
+                    </Typography>
+                    <Typography variant='h6' className='title'>
+                    Minhas áreas de atuação são:
+                      Front-end (Nível Sênior) utilizando Angular 2+, Html 5, SASS, CSS 3, TPS, JS.
+                      Back-end (Nível Pleno) utilizando Java 8+ (com Spring Boot) + comunicação com bancos relacionais como Oracle, SQL Server.
+                      Back-end (Nível Júnior) utilizando Node (com NestJs) + comunicação com bancos não relacionais como MongoDB, MariaDB.
+                    </Typography>
+                  </div>
+                </ScrollAnimation>
               </Grid>
-              
             </Grid>
           </ScrollAnimation>
         </div>

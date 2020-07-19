@@ -2,9 +2,9 @@ import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { delay } from 'core/scroll.consts'
-import '../../styles/sass/_home.scss'
 import { Grid, Typography, makeStyles, Theme, createStyles, Button } from '@material-ui/core'
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import '../../styles/sass/_home.scss'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -48,14 +48,16 @@ const Home = () => {
                 </div>
               </Grid>
               <Grid item xs={12} sm={6} className='flex row left v-center full-height'>
-                <img className='programmer' src='./assets/images/dev.png' alt=''/>
+                <ScrollAnimation animateIn="zoomInUp" delay={delay} offset={0}>
+                  <img className='programmer' src='./assets/images/profile.jpg' alt=''/>
+                </ScrollAnimation>
               </Grid>
             </Grid>
           </ScrollAnimation>
         </div>
         <div className='footer'>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
-            <polygon points="100 0 100 10 0 10" />
+            <polygon points="100 0 100 10 0 10" style={{ fill: '#e91760'}} />
           </svg>
         </div>
       </div>

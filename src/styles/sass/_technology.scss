@@ -1,0 +1,11 @@
+.after-divider::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #0097a7;
+  bottom: -15px;
+  left: calc(50% - 30px);
+  margin-bottom: 68px;
+}

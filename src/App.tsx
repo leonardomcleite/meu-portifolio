@@ -8,8 +8,8 @@ import Contact from 'pages/Contact';
 import Home from 'pages/Home';
 import Network from 'pages/Network';
 import Project from 'pages/Project';
-import Technology from 'pages/Tecnology';
-import React from 'react';
+import Technology from 'pages/Technology';
+import React, { useState } from 'react';
 import { configureAnchors, goToAnchor, goToTop } from 'react-scrollable-anchor';
 import { theme } from './styles/theme/theme';
 import { scrollDuration } from 'core/scroll.consts';
@@ -38,11 +38,33 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function App() {
 
+  const [btnClass, setBtnClass] = useState<any>({
+    home: 'btnLink active',
+    aboutMe: 'btnLink ',
+    technology: 'btnLink ',
+    project: 'btnLink ',
+    contact: 'btnLink ',
+  })
+
   const classes = useStyles();
   configureAnchors({offset: -64, scrollDuration: scrollDuration, keepLastAnchorHash: false})
 
-  const downloadCV = () => {
+  const goTo = (hash: string) => {
+    goToAnchor(hash);
+    isActive();
+  }
 
+  const isActive = () => {
+    const hash = window.location.hash.replace('#', '');
+    const btns: any = {};
+    for (const key in btnClass) {
+      if (Object.prototype.hasOwnProperty.call(btnClass, key)) {
+        btns[key] = 'btnLink ';
+        if (hash === key)
+          btns[key] = 'btnLink active'
+      }
+    }
+    setBtnClass(btns)
   }
 
   return (
@@ -58,13 +80,12 @@ function App() {
             <h2 className='App-logo'>{`< Leonardo Marques >`}</h2>
           </Grid>
           <Grid item xs={12} sm={9} style={{textAlign: 'end'}}>
-            <Button className={classes.spacingButtons} onClick={() => goToAnchor('home', true)}>Home</Button>
-            <Button className={classes.spacingButtons} onClick={() => goToAnchor('aboutMe', true)}>Sobre Mim</Button>
-            <Button className={classes.spacingButtons} onClick={() => goToAnchor('technology', true)}>Tecnologias</Button>
-            <Button className={classes.spacingButtons} onClick={() => goToAnchor('project', true)}>Projetos</Button>
-            <Button className={classes.spacingButtons} onClick={() => goToAnchor('contact', true)}>Contato</Button>
-            <Button className={classes.spacingButtons} onClick={() => goToAnchor('network', true)}>Redes Sociais</Button>
-            <Button className={classes.spacingButtons} onClick={() => downloadCV()} 
+            <Button className={btnClass.home} onClick={() => goTo('home')}>Home</Button>
+            <Button className={btnClass.aboutMe} onClick={() => goTo('aboutMe')}>Sobre Mim</Button>
+            <Button className={btnClass.technology} onClick={() => goTo('technology')}>Tecnologias</Button>
+            <Button className={btnClass.project} onClick={() => goTo('project')}>Projetos</Button>
+            <Button className={btnClass.contact} onClick={() => goTo('contact')}>Contato</Button>
+            <Button className={classes.spacingButtons} href='./assets/Leonardo Marques de Castro Leite.pdf' download
               variant="contained"
               color='primary'
               endIcon={<GetAppIcon/>}>

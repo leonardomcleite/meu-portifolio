@@ -24,9 +24,21 @@ body {
 main {
   background-color: #e7eaed; }
 
+.btnLink {
+  margin-left: 10px; }
+  .btnLink.active {
+    color: #0097a7; }
+
 .container {
   padding: 24px;
-  height: 80vh; }
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; }
+  .container .full-height {
+    height: 80vh !important; }
+  .container.code {
+    background: url("/assets/images/code.jpeg") no-repeat; }
   .container polygon {
     fill: #fff; }
   .container:nth-child(odd) {
@@ -36,7 +48,8 @@ main {
     .container:nth-child(odd) polygon {
       fill: #e7eaed; }
   .container:last-child {
-    height: calc(100vh - 64px); }
+    height: calc(20vh - 64px);
+    min-height: auto; }
 
 .MuiButtonBase-root {
   border-radius: 20px !important; }
@@ -69,3 +82,42 @@ main {
     .flex.col.center {
       justify-content: center;
       align-items: center; }
+
+div .MuiAvatar-colorDefault {
+  background-color: #e7eaed; }
+
+.MuiIcon-root {
+  text-align: center; }
+
+.up-down {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both; }
+
+@keyframes up-down {
+  0% {
+    opacity: 0.1;
+    transform: translateY(10px);
+    transform: translateZ(0) scale(0.5); }
+  100% {
+    opacity: 1;
+    transform: translateY(-10px);
+    transform: translateZ(0) scale(1); } }
+
+.zoom {
+  animation: zoom 10s ease-in-out; }
+
+@keyframes zoom {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+
+.fadeInToBottom {
+  animation: fadeInToBottom ease-out; }
+
+@keyframes fadeInToBottom {
+  0% {
+    opacity: 0.5;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
