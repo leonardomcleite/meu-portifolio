@@ -77,7 +77,7 @@ function App() {
         <Toolbar color='inherit'>
         <Grid container spacing={0}>
           <Grid item xs={12} sm={3}>
-            <h2 className='App-logo'>{`< Leonardo Marques >`}</h2>
+            <h2 className='App-logo'>{`<LeonardoMarques/>`}</h2>
           </Grid>
           <Grid item xs={12} sm={9} style={{textAlign: 'end'}}>
             <Button className={btnClass.home} onClick={() => goTo('home')}>Home</Button>
