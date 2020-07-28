@@ -1,6 +1,8 @@
+@import 'variables';
+
 .info {
-  border-top: 3px solid #0097a7;
-  border-bottom: 3px solid #0097a7;
+  border-top: 3px solid $secondary;
+  border-bottom: 3px solid $secondary;
   padding: 30px;
   background: #fff;
   width: 445px;
@@ -11,12 +13,11 @@
     font-size: 22px;
     font-weight: 600;
     margin: 0 5px 0 0;
-    color: #0097a7;
+    color: $secondary;
   }
   p {
     padding: 0 0 10px 60px;
     margin: 0 20px 0 0;
     font-size: 14px;
-    color: #5a6570;
   }
 }

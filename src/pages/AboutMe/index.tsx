@@ -11,22 +11,22 @@ const AboutMe = () => {
       <div className='container code'>
         <div className='full-height'>
           <ScrollAnimation className='flex full-height' animateIn='fadeIn' delay={delay} offset={0}>
-            <Grid container spacing={0} className='flex full-height'>
-              <Grid item xs={12} sm={6} className='flex row center full-height'>
-                <img src='./assets/images/dev.png' alt=''/>
-              </Grid>
-              <Grid item xs={12} sm={6} className='flex row center full-height'>
+            <Grid container spacing={0} className='flex row center full-height'>
+              <Grid item xs={12} sm={9} className='flex row center full-height'>
                 <ScrollAnimation animateIn='fadeInToBottom' delay={delay} offset={0}>
                   <div className='content highlight'>
-                    <Typography variant='h1' className='title'>
-                      Sobre mim
-                    </Typography>
-                    <Typography variant='h6' className='title'>
-                    Minhas áreas de atuação são:
-                      Front-end (Nível Sênior) utilizando Angular 2+, Html 5, SASS, CSS 3, TPS, JS.
-                      Back-end (Nível Pleno) utilizando Java 8+ (com Spring Boot) + comunicação com bancos relacionais como Oracle, SQL Server.
-                      Back-end (Nível Júnior) utilizando Node (com NestJs) + comunicação com bancos não relacionais como MongoDB, MariaDB.
-                    </Typography>
+                    <img className='avatar' src='./assets/images/avatar.png' alt=''/>
+                    <div className='flex col'>
+                      <Typography variant='h1' className='title'>
+                        Sobre mim
+                      </Typography>
+                      <Typography variant='h6' className='title'>
+                      Minhas áreas de atuação são:
+                        Front-end (Nível Sênior) utilizando Angular 2+, Html 5, SASS, CSS 3, TPS, JS.
+                        Back-end (Nível Pleno) utilizando Java 8+ (com Spring Boot) + comunicação com bancos relacionais como Oracle, SQL Server.
+                        Back-end (Nível Júnior) utilizando Node (com NestJs) + comunicação com bancos não relacionais como MongoDB, MariaDB.
+                      </Typography>
+                    </div>
                   </div>
                 </ScrollAnimation>
               </Grid>

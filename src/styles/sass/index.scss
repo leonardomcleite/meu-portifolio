@@ -1,4 +1,5 @@
 @import 'app';
+@import 'variables';
 
 body {
   margin: 0;
@@ -8,19 +9,21 @@ body {
 }
 
 main {
-  background-color: rgb(231, 234, 237);
+  background-color: $primaryContrast;
+}
+
+svg g {
+  fill: $secondary
 }
 
 .btnLink {
   margin-left: 10px;
   &.active {
-    color: #0097a7
+    color: $secondary
   }
 }
 
 .container {
-  // padding: 24px;
-  // min-height: 80vh;
   padding: 24px;
   min-height: 80vh;
   display: flex;
@@ -41,7 +44,7 @@ main {
       transform: scaleX(-1);
     }
     polygon {
-      fill: rgb(231, 234, 237);
+      fill: #e7eaed;
     }
   }
   &:last-child {
@@ -95,18 +98,16 @@ main {
 }
 
 div .MuiAvatar-colorDefault {
-  background-color: rgb(231, 234, 237);
+  background-color: $primaryContrast;
 }
 
 .MuiIcon-root {
   text-align: center;
 }
 
-
 .up-down {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  animation: up-down 2s ease-in-out;
 }
-
 
 @keyframes up-down {
   0% {

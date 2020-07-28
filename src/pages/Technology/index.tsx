@@ -1,10 +1,10 @@
 import { Grid, Typography } from '@material-ui/core'
-import CardTechnology from 'components/CardTechnology'
-import { delay } from 'core/scroll.consts'
 import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
 import ScrollableAnchor from 'react-scrollable-anchor'
 import '../../styles/sass/_technology.scss'
+import CardTechnology from 'components/CardTechnology'
+import { delay } from 'core/scroll.consts'
 
 const Technology = () => {
 
@@ -18,9 +18,9 @@ const Technology = () => {
     {name: 'React Native', icon: 'fab fa-react', description: 'Biblioteca/Framework usada para desenvolvimento de aplicativos para Android e iOS de forma nativa'},
     {name: 'Node.js', icon: 'fab fa-node-js', description: 'Com essa tecnologia podemos criar desde sites até APIs diretamente do servidor'},
     {name: 'Java', icon: 'fab fa-java', description: 'Com essa tecnologia podemos criar desde sites até APIs diretamente do servidor'},
-    {name: 'MongoDB', img: './assets/images/mongodb.svg', description: 'MongoDB é um banco de dados NoSQL orientado a documentos estruturados no formato JSON'},
+    {name: 'MongoDB', img: './assets/icons/mongodb.svg', description: 'MongoDB é um banco de dados NoSQL orientado a documentos estruturados no formato JSON'},
     {name: 'SQL', icon: 'fas fa-database', description: 'Linguagem de pesquisa declarativa padrão para banco de dados relacionals'},
-    {name: 'Ágil', img: './assets/images/agile2.svg', description: 'Desenvolvimento Ágil de Software ou Método ágil consiste em um conjunto de comportamentos, processos, etc, utilizados para a criação de produtos.'},
+    {name: 'Ágil', img: './assets/icons/agile.svg', description: 'Desenvolvimento Ágil de Software ou Método ágil consiste em um conjunto de comportamentos, processos, etc, utilizados para a criação de produtos.'},
   ];
 
   return(

@@ -6,14 +6,19 @@
   font-family: 'Rajdhani', sans-serif;
   margin: 0px;
   font-size: 2em;
-  color: #4C6383; }
+  color: #1e246e; }
 
 .MuiToolbar-root {
   background-color: #fff; }
 
-@media only screen and (max-width: 1100px) {
-  .MuiToolbar-root {
-    background-color: red !important; } }
+img.avatar {
+  width: 400px;
+  height: auto; }
+
+.content.highlight {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end; }
 
 body {
   margin: 0;
@@ -24,10 +29,13 @@ body {
 main {
   background-color: #e7eaed; }
 
+svg g {
+  fill: #d50000; }
+
 .btnLink {
   margin-left: 10px; }
   .btnLink.active {
-    color: #0097a7; }
+    color: #d50000; }
 
 .container {
   padding: 24px;
@@ -90,7 +98,7 @@ div .MuiAvatar-colorDefault {
   text-align: center; }
 
 .up-down {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both; }
+  animation: up-down 2s ease-in-out; }
 
 @keyframes up-down {
   0% {

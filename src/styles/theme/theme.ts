@@ -20,14 +20,13 @@ export let theme = createMuiTheme({
   palette: {
     primary: {
       // light: será calculada com base em palette.primary.main,
-      main: '#4C6383',
+      main: '#1e246e',
       contrastText: '#fff',
       // dark: será calculada com base em palette.primary.main,
       // contrastText: será calculada para contrastar com palette.primary.main
     },
     secondary: {
-      light: '#0097a7',
-      main: '#00897b',
+      main: '#d50000',
       // dark: será calculada com base palette.secondary.main,
       contrastText: '#fff',
     },

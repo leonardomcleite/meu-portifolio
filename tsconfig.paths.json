@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@app/*": [
+        "src/*"
+      ],
+      "@images/*": [
+        "public/assets/images/*"
+      ],
+      "@icons/*": [
+        "public/assets/icons/*"
+      ],
+      "@tgt/env/*": [
+        "environments/*"
+      ],
+    }
+  }
+}
